@@ -1,0 +1,16 @@
+C:\Users\roman\Desktop\MoneyApp\MoneyApp\MoneyApp\bin\Debug\netstandard2.0\MoneyApp.deps.json
+C:\Users\roman\Desktop\MoneyApp\MoneyApp\MoneyApp\bin\Debug\netstandard2.0\MoneyApp.dll
+C:\Users\roman\Desktop\MoneyApp\MoneyApp\MoneyApp\bin\Debug\netstandard2.0\ref\MoneyApp.dll
+C:\Users\roman\Desktop\MoneyApp\MoneyApp\MoneyApp\bin\Debug\netstandard2.0\MoneyApp.pdb
+C:\Users\roman\Desktop\MoneyApp\MoneyApp\MoneyApp\obj\Debug\netstandard2.0\MoneyApp.csprojAssemblyReference.cache
+C:\Users\roman\Desktop\MoneyApp\MoneyApp\MoneyApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\roman\Desktop\MoneyApp\MoneyApp\MoneyApp\obj\Debug\netstandard2.0\View\ItemsPage.xaml.g.cs
+C:\Users\roman\Desktop\MoneyApp\MoneyApp\MoneyApp\obj\Debug\netstandard2.0\MoneyApp.AssemblyInfoInputs.cache
+C:\Users\roman\Desktop\MoneyApp\MoneyApp\MoneyApp\obj\Debug\netstandard2.0\MoneyApp.AssemblyInfo.cs
+C:\Users\roman\Desktop\MoneyApp\MoneyApp\MoneyApp\obj\Debug\netstandard2.0\MoneyApp.csproj.CoreCompileInputs.cache
+C:\Users\roman\Desktop\MoneyApp\MoneyApp\MoneyApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\roman\Desktop\MoneyApp\MoneyApp\MoneyApp\obj\Debug\netstandard2.0\MoneyApp.dll
+C:\Users\roman\Desktop\MoneyApp\MoneyApp\MoneyApp\obj\Debug\netstandard2.0\ref\MoneyApp.dll
+C:\Users\roman\Desktop\MoneyApp\MoneyApp\MoneyApp\obj\Debug\netstandard2.0\MoneyApp.pdb
+C:\Users\roman\Desktop\MoneyApp\MoneyApp\MoneyApp\obj\Debug\netstandard2.0\View\ItemDetailsPage.xaml.g.cs
+C:\Users\roman\Desktop\MoneyApp\MoneyApp\MoneyApp\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
