@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             xmlns:custom="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="MoneyApp.View.ItemDetailsPage"
+             Title="{Binding CharCode}">
+
+    <StackLayout Padding="0, 0, 0, 0" Spacing="0">
+        <Grid Padding="20, 20, 20, 0" Background="#85ccff">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <custom:CircleImage Grid.Row="0" Grid.Column="0" Source="{Binding Image}" BorderColor="Black" BorderThickness="1" HeightRequest="60" Aspect="AspectFill"/>
+            <Label Grid.Row="0" Grid.Column="1" Text="{Binding CharCode}" HorizontalOptions="Start" VerticalOptions="Center" FontSize="30" TextColor="White" Margin="10, 0, 0, 0"/>
+            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Name}" HorizontalOptions="Start" VerticalOptions="Center" FontSize="15" TextColor="White"/>
+            <ImageButton Grid.Row="0" Grid.Column="3" Source="{Binding FavImg}" Command="{Binding FavCommand}" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="35"/>
+            <Frame Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" BackgroundColor="{Binding DailyColor}" BorderColor="Transparent" CornerRadius="5" HorizontalOptions="End" Padding="10, 5, 10, 5" Margin="0">
+                <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding DailyChange}" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" FontSize="15"/>
+            </Frame>
+        </Grid>
+        <chart:ChartView x:Name="MainChart" HeightRequest="200" Margin="0, 10, 0, 0" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+        <Grid Padding="10, 0" Margin="0, 20, 0, 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Text="Макс. значение" FontAttributes="Bold" TextColor="#4a4a4a" VerticalOptions="End" HorizontalOptions="Center"/>
+            <Label Grid.Row="0" Grid.Column="1" Text="Мин. значение" FontAttributes="Bold" TextColor="#4a4a4a" VerticalOptions="End" HorizontalOptions="Center"/>
+            <Label Grid.Row="1" Grid.Column="0" Text="{Binding MaxValue}" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Grid.Row="1" Grid.Column="1" Text="{Binding MinValue}" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Label Grid.Row="2" Grid.Column="0" Text="Начало периода" FontAttributes="Bold" TextColor="#4a4a4a" VerticalOptions="End" HorizontalOptions="Center"/>
+            <Label Grid.Row="2" Grid.Column="1" Text="Конец периода" FontAttributes="Bold" TextColor="#4a4a4a" VerticalOptions="End" HorizontalOptions="Center"/>
+            <Label Grid.Row="3" Grid.Column="0" Text="{Binding First}" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Grid.Row="3" Grid.Column="1" Text="{Binding Last}" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Label Grid.Row="4" Grid.Column="0" Text="Изменение" FontAttributes="Bold" TextColor="#4a4a4a" VerticalOptions="End" HorizontalOptions="Center"/>
+            <Label Grid.Row="4" Grid.Column="1" Text="Изменение в %" FontAttributes="Bold" TextColor="#4a4a4a" VerticalOptions="End" HorizontalOptions="Center"/>
+            <Label Grid.Row="5" Grid.Column="0" Text="{Binding ValueChange}" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Grid.Row="5" Grid.Column="1" Text="{Binding PercentValueChange}" HorizontalOptions="Center" VerticalOptions="Center"/>
+        </Grid>
+        <Grid Padding="10, 0" Margin="0, 20, 0, 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Button x:Name="Btn_1" Grid.Row="0" Grid.Column="0" Text="2Г" Clicked="TenYears_Clicked"/>
+            <Button x:Name="Btn_2" Grid.Row="0" Grid.Column="1" Text="1Г" Clicked="Year_Clicked"/>
+            <Button x:Name="Btn_3" Grid.Row="0" Grid.Column="2" Text="1М" Clicked="Month_Clicked"/>
+            <Button x:Name="Btn_4" Grid.Row="0" Grid.Column="3" Text="1Н" Clicked="Week_Clicked"/>
+            <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" BackgroundColor="#85ccff" Command="{Binding GoToCommand}" Text="Анализ"/>
+        </Grid>
+    </StackLayout>
+    
+</ContentPage>

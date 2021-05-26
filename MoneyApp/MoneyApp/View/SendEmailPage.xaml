@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xlabs="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             x:Class="MoneyApp.View.SendEmailPage"
+             Title="Написать нам">
+    <ContentPage.Content>
+        <Grid Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Text="Тема" HorizontalOptions="Start" FontAttributes="Bold"/>
+            <Entry Grid.Row="1" x:Name="ThemeTextBox"/>
+            <Label Grid.Row="2" Text="Сообщение" HorizontalOptions="Start" FontAttributes="Bold"/>
+            <Editor Grid.Row="3" x:Name="BodyTextBox"/>
+            <Button Grid.Row="4" Text="Отправить" BackgroundColor="#d6f5ff" Clicked="Button_Clicked"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

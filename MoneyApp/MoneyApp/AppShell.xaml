@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:MoneyApp.View"
+       x:Class="MoneyApp.AppShell"
+       Title="TheApp"
+       BackgroundColor="#0093fc"
+       ForegroundColor="#fff"
+       TitleColor="#fff"
+       DisabledColor="#B4FFFFFF"
+       UnselectedColor="#95FFFFFF">
+
+    <Shell.Resources>
+        <Style TargetType="TabBar">
+            <Setter Property="Shell.TabBarBackgroundColor"
+            Value="#0093fc" />
+            <Setter Property="Shell.TabBarTitleColor"
+            Value="#fff" />
+            <Setter Property="Shell.TabBarUnselectedColor"
+            Value="#95FFFFFF" />
+        </Style>
+    </Shell.Resources>
+    
+    <TabBar>
+        <Tab Title="Котировки" Icon="MoneyTabBarIcon.png">
+            <ShellContent Title="Отслеживаемое" Route="FavoriteItemsPage" ContentTemplate="{DataTemplate local:FavoriteItemsPage}"/>
+            <ShellContent Title="Валюта" Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}"/>
+        </Tab>
+        <Tab Title="Прочее" Icon="OtherIcon">
+            <ShellContent Route="HelpPage" ContentTemplate="{DataTemplate local:HelpPage}"/>
+        </Tab>
+    </TabBar>
+    
+</Shell>

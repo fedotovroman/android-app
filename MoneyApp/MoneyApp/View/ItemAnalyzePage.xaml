@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="MoneyApp.View.ItemAnalyzePage"
+             Title="Анализ">
+    <ContentPage.Content>
+        <ScrollView Padding="0" Margin="0">
+            <Grid Padding="10" Margin="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <chart:ChartView x:Name="MainChart" Grid.Row="0" Grid.ColumnSpan="4" HeightRequest="200"/>
+                <Button x:Name="TwoYearsBtn" Grid.Row="1" Grid.Column="0" Text="2Г" Clicked="Button_Clicked"/>
+                <Button x:Name="OneYearBtn" Grid.Row="1" Grid.Column="1" Text="1Г" Clicked="Button_Clicked_1"/>
+                <Button x:Name="OneMonthBtn" Grid.Row="1" Grid.Column="2" Text="1М" Clicked="Button_Clicked_2"/>
+                <Button x:Name="OneWeekBtn" Grid.Row="1" Grid.Column="3" Text="1Н" Clicked="Button_Clicked_3"/>
+                <Button x:Name="MainBtn" Grid.Row="2" Grid.ColumnSpan="4" Text="Основной график" Clicked="MainBtn_Clicked"/>
+                <Button x:Name="SMABtn" Grid.Row="3" Grid.ColumnSpan="4" Text="Простое скользящее среднее" Clicked="SMABtn_Clicked"/>
+                <Button x:Name="EMABtn" Grid.Row="4" Grid.ColumnSpan="4" Text="Экспотенциальное скользящее среднее" Clicked="EMABtn_Clicked"/>
+                <Button x:Name="BBLine1Btn" Grid.Row="5" Grid.ColumnSpan="4" Text="Максимум Боллинджера" Clicked="BBLine1Btn_Clicked"/>
+                <Button x:Name="BBLine2Btn" Grid.Row="6" Grid.ColumnSpan="4" Text="Минимум Боллинджера" Clicked="BBLine2Btn_Clicked"/>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
